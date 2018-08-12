@@ -14,7 +14,7 @@ export class UserService {
 
   uploadData (uploadForm) {
 
-    return this.http.post<RegisterResponse>('/user/submit', {uploadForm});
+    return this.http.post<RegisterResponse>('/user/submit', uploadForm);
   }
 
 }
