@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header" style="color: #ffffff; background-color: #257089">
+          Upload your Document
+        </div>
+        <div class="card-body">
+          <form method="post" [formGroup]="uploadForm" enctype="multipart/form-data" (ngSubmit)="OnUpload(uploadForm.value)" >
+
+            <div class="form-group">
+              <label>Choose document*</label>
+              <br>
+              <label for="file-upload" class="custom-file-upload">
+                <i class="material-icons">
+                  cloud_upload
+                </i>
+                {{filename}}
+              </label>
+              <input type="file" ng2FileSelect [uploader]="uploader" (onFileSelected)="onFileSelected($event)" id="file-upload" class="form-control-file">
+            </div>
+            <button type="submit"  class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <p>If you have any problem in submitting the document, you can send your document to
+            <b>
+              rupeshyadav94.ry@gmail.com
+            </b>
+            with an attachment. We will upload your document
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
